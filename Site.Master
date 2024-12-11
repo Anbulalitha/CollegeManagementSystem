@@ -1,0 +1,73 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Site.master.cs" Inherits="CollegeManagementSystem.Site" %>
+
+<!DOCTYPE html>
+
+<html>
+<head runat="server">
+    
+    <style>
+     body {
+         margin: 0;
+         font-family: Arial, sans-serif;
+     }
+     .Header {
+         background-color: mediumpurple;
+         overflow: hidden;
+     }
+     .Header a {
+         float: left;
+         display: block;
+         color: white;
+         text-align: center;
+         padding: 14px 16px;
+         text-decoration: none;
+     }
+     .Header a:hover {
+         background-color: #ddd;
+         color: black;
+     }
+    
+     footer {
+         flex-shrink: 0;
+         height: 50px;
+         width: 100%;
+         background-image: linear-gradient(red, green);
+         text-align: center;
+         display: flex;
+         align-items: center;
+         justify-content: center;
+     }
+
+     footer p {
+         margin: 0;
+         color: white;
+     }
+     #form1{
+         height:100vh;
+     }
+
+ </style>
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+
+<body>
+   <form id="form1" runat="server">
+            <div class="Header">
+    <a href="Home.aspx">Home</a>
+    <a href="AddStudent.aspx">Add Student</a>
+    <a href="ViewStudent.aspx">View Student</a>
+    <a href="UpdateStudent.aspx">Update Student</a>
+    <a href="RemoveStudent.aspx">Remove Student</a>
+    <a href="">Logout</a>
+
+</div>
+        <div class="main-content">
+            <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+            </asp:ContentPlaceHolder>
+        </div>
+         
+    </form>
+
+</body>
+</html>
